@@ -1,11 +1,11 @@
-#include < iostream>
+Ôªø#include < iostream>
 using namespace std;
 #define tab "\t"
 
 class Element
 {
-	int Data;    // ÁÌ‡˜ÂÌËÂ ˝ÎÂÏÂÌÚ‡ 
-	Element* pNext; // ÛÍ‡Á‡ÚÂÎ¸ Ì‡ ÒÎÂ‰Û˛˘ËÈ ˝ÎÂÏÂÌÚ 
+	int Data;    // –∑–Ω–∞—á–µ–Ω–∏–µ —ç–ª–µ–º–µ–Ω—Ç–∞ 
+	Element* pNext; // —É–∫–∞–∑–∞—Ç–µ–ª—å –Ω–∞ —Å–ª–µ–¥—É—é—â–∏–π —ç–ª–µ–º–µ–Ω—Ç 
 public:
 	Element(int Data, Element* pNext = nullptr) : Data(Data), pNext(pNext)
 	{
@@ -36,27 +36,27 @@ public:
 	// Adding elements :
 	void push_front(int Data)
 	{
-		// 1) ÒÓÁ‰‡ÂÏ ÌÓ‚˚È ˝ÎÂÏÂÌÚ 
+		// 1) —Å–æ–∑–¥–∞–µ–º –Ω–æ–≤—ã–π —ç–ª–µ–º–µ–Ω—Ç 
 		Element* New = new Element(Data);
-		//2) ‚ÍÎ˛˜‡ÂÏ ‚ÚÓÓÈ ˝ÎÂÏÂÌÚ 
+		//2) –≤–∫–ª—é—á–∞–µ–º –≤—Ç–æ—Ä–æ–π —ç–ª–µ–º–µ–Ω—Ç 
 		New->pNext = Head;
-		// 3) ÔÂÂ‚Ó‰ËÏ „ÓÎÓ‚Û Ì‡ ÌÓ‚˚È ˝ÎÂÏÂÌÚ
+		// 3) –ø–µ—Ä–µ–≤–æ–¥–∏–º –≥–æ–ª–æ–≤—É –Ω–∞ –Ω–æ–≤—ã–π —ç–ª–µ–º–µ–Ω—Ç
 		Head = New;
 	}
 
 	void push_back(int Data)
 	{
 		if (Head == nullptr)return push_front(Data);
-		// ‰ÓıÓ‰ËÏ ‰Ó ÍÓÌˆ‡ ÒÔËÒÍ‡
+		// –¥–æ—Ö–æ–¥–∏–º –¥–æ –∫–æ–Ω—Ü–∞ —Å–ø–∏—Å–∫–∞
 		Element* Temp = Head;
 		while (Temp->pNext)
 		{
 			Temp = Temp->pNext;
 		}
-		//2)_ ÒÓÁ‰‡ÂÏ ÌÓ‚˚È ˝ÎÂÏÂÌÚ
+		//2)_ —Å–æ–∑–¥–∞–µ–º –Ω–æ–≤—ã–π —ç–ª–µ–º–µ–Ω—Ç
 
 		Element* New = new Element(Data);
-		//3)‚ÍÎ˛˜‡ÂÏ ÌÓ‚˚È ˝ÎÂÏÂÌÚ ‚ ÒÔËÒÓÍ 
+		//3)–≤–∫–ª—é—á–∞–µ–º –Ω–æ–≤—ã–π —ç–ª–µ–º–µ–Ω—Ç –≤ —Å–ø–∏—Å–æ–∫ 
 		Temp->pNext = New;
 	}
 	void print()const
@@ -66,7 +66,7 @@ public:
 		while (Temp)
 		{
 			cout << Temp << tab << Temp->Data << tab << Temp->pNext << endl;
-			Temp = Temp->pNext; // ÔÂÂıÓ‰ Ì‡ ÒÎÂ‰Û˛˘ËÈ ˝ÎÂÏÂÌÚ 
+			Temp = Temp->pNext; // –ø–µ—Ä–µ—Ö–æ–¥ –Ω–∞ —Å–ª–µ–¥—É—é—â–∏–π —ç–ª–µ–º–µ–Ω—Ç 
 		}
 	}
 };
@@ -74,7 +74,7 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	int n;
-	cout << "‚‚Â‰ËÚÂ ÍÓÎË˜ÂÒÚ‚Ó ˝ÎÂÏÂÌÚÓ‚ :"; cin >> n;
+	cout << "–≤–≤–µ–¥–∏—Ç–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —ç–ª–µ–º–µ–Ω—Ç–æ–≤ :"; cin >> n;
 	ForwardList list;
 	for (int i = 0; i < n; i++)
 	{
